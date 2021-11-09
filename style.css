@@ -1,49 +1,83 @@
 body {
+    background-color: #0A2344;
     font-family: 'Roboto', sans-serif;
-}
-
-.accordions {
-    text-align: center;
-}
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    display: inline-block;
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 50%;
-    text-align: left;
-    border: 1px solid black;
-    border-style: dashed;
-    outline: none;
-    transition: 0.4s;
     font-size: 20px;
-  }
-  
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-    background-color: #ccc;
-}
-  
-  /* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    width: 50%;
-    background-color: white;
-    display: none;
-    overflow: hidden;
+    /* Vis altid scrollbar i y-retning */
+    overflow-y: scroll;
 }
 
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 15px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+/* Centrér alle h1-elementer (overskrifter) */
+h1 {
+    text-align: center;
+    margin: 40px 0 0 20px;
 }
-  
-.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+
+/* Style vores accordion-elementer */
+.accordion {
+    width: 800px;
+    margin: 90px auto;
+    color: black;
+    background-color: white;
+    padding: 45px 45px;
+}
+
+/* Positionér accordion-elementerne i forhold til hinanden */
+.accordion .container {
+    position: relative;
+    margin: 10px 10px;
+}
+
+/* Style titlen for accordionsne */
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.accordion .label::before {
+    /* Vis "+" tegn når containeren er åben */
+    content: '+';
+    /* Juster farve pg placering af titeltekst */
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+.accordion .content {
+    position: relative;
+    background: white;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    /* Animation når indholdet lukkes */
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
+}
+
+/* Style linjerne mellem accordionsne */
+.accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+    /* Man kan ikke animere ting uden en værdi for højden
+    (height: auto; duer ikke), så vi sætter den maksimale
+    højde af indholdet til et arbitrært højt tal når 
+    accordionen åbnes. */
+    max-height: 999px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Vis "-" tegn når containeren er åben */
+.accordion .container.active .label::before {
+    content: '-';
+    font-size: 45px;
 }
