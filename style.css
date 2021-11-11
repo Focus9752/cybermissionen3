@@ -12,8 +12,12 @@ h1 {
     margin: 40px 0 0 20px;
 }
 
-/* Style vores accordion-elementer + vores indledningsblok */
-.accordion, .indledning {
+/* 
+    Style vores accordion-elementer 
+    Style desuden indlednings- og afrundingsblokke
+*/
+
+.accordion, .indledning, .afrunding {
     width: 800px;
     margin: 90px auto;
     color: black;
