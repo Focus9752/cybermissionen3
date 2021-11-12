@@ -9,7 +9,7 @@ body {
 /* Centrér alle h1-elementer (overskrifter) */
 h1 {
     text-align: center;
-    margin: 40px 0 0 20px;
+    margin: 40px 0 0 0;
 }
 
 /* 
@@ -17,7 +17,7 @@ h1 {
     Style desuden indlednings- og afrundingsblokke
 */
 
-.accordion, .indledning, .afrunding {
+.altindhold {
     width: 800px;
     margin: 90px auto;
     color: black;
