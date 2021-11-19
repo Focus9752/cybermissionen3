@@ -1,6 +1,3 @@
-
-
-
 //Kode til at håndtere accordions
 
 //Hent accordion-elementer fra siden
