@@ -63,10 +63,10 @@ let questions = [
   {
   numb: 6,
   question: "Hvad er forskellen på nødvendige og personaliserede cookies?",
-  answer: "De nødvendige cookies gør så hjemmesiden fungerer mens de personlige husker dine personlige valg til hjemmesiden",
+  answer: "Nødvendige gør så hjemmesiden fungerer mens personlige husker dine personlige valg",
   options: [
-    "De personlige er hvad der får hjemmesiden til at fungere mens nødvendige er hvad der giver dig adgang til hjemmesiden",
-    "De nødvendige cookies gør så hjemmesiden fungerer mens de personlige husker dine personlige valg til hjemmesiden",
+    "Personlige får hjemmesiden til at fungere mens nødvendige giver dig adgang til hjemmesiden",
+    "Nødvendige gør så hjemmesiden fungerer mens personlige husker dine personlige valg",
     "De nødvendige cookies er nødvendige til reklamer",
     "De personlige cookies smager bare bedre"
   ]

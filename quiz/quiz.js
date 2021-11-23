@@ -1,3 +1,11 @@
+/*
+Al koden i dette skript er hentet her: https://www.codingnepalweb.com/quiz-app-with-timer-javascript/
+
+Jeg har ikke pillet ved koden ud over at ændre teksten til dansk.
+Heldigvis har dem der skrev det også skrevet en masse kommentarer,
+som man kan læse hvis man gerne vil forstå hvad det er der foregår.
+*/
+
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
@@ -154,12 +162,12 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 4){ // if user scored more than 3
+    if (userScore > 5){ // if user scored more than 5
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>Tillyke! Du fik <p>'+ userScore +'</p> rigtige ud af <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>Sublimt! Du fik <p>'+ userScore +'</p> rigtige ud af <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 2){ // if user scored more than 1
+    else if(userScore > 2){ // if user scored more than 2
         let scoreTag = '<span>Godt gået. Du fik <p>'+ userScore +'</p> rigtige ud af <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
